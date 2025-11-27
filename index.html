@@ -8,19 +8,40 @@
    </head>
    <body>
       <header>
-         <h1 id="Philip Andrew Luminarias">Student Name</h1>
+         <!-- id should not have spaces; text inside is your name -->
+         <h1 id="student-name">Philip Andrew Luminarias</h1>
          <img src="Image.jpeg" alt="Profile Picture" id="profile-img">
-        <p id="course-year">BS Computer Science  –  3rd Year</p>
+         <p id="course-year">BS Computer Science – 3rd Year</p>
          <button id="theme-toggle">Switch Theme</button>
       </header>
+
       <section id="achievements">
-         <h2>Achievements/Certifications</h2>
+         <h2>Achievements</h2>
          <ul>
-            <li>Achievement 1</li>
-            <li>Achievement 2</li>
-            <li>Achievement 3</li>
+            <li>Microsoft Office Specialist: Excel Associate (Microsoft 365 Apps, 2025)</li>
+            <li>IT Specialist – Data Analytics (Certiport, 2025)</li>
+            <li>IT Specialist – Java (Certiport, 2025)</li>
          </ul>
+
+         <!-- Achievement images -->
+         <div class="achievement-grid">
+            <div class="achievement-item">
+               <img src="ach-excel.png" alt="Excel Associate Achievement">
+               <p><strong>Excel Associate – Microsoft 365 Apps</strong></p>
+            </div>
+
+            <div class="achievement-item">
+               <img src="ach-data-analytics.png" alt="Data Analytics Achievement">
+               <p><strong>IT Specialist – Data Analytics</strong></p>
+            </div>
+
+            <div class="achievement-item">
+               <img src="ach-java.png" alt="Java Achievement">
+               <p><strong>IT Specialist – Java</strong></p>
+            </div>
+         </div>
       </section>
+
       <section id="projects">
          <h2>Previous Projects</h2>
          <ul>
@@ -29,6 +50,8 @@
             <li>Project 3</li>
          </ul>
       </section>
+
       <script src="script.js"></script>
    </body>
 </html>
+
