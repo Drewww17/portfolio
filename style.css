@@ -69,3 +69,44 @@ body.dark {
     margin-bottom: 20px;
     line-height: 1.5;
 }
+#projects {
+    margin-top: 40px;
+}
+
+#projects h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.project-item {
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.project-item h3 {
+    margin: 8px 0 4px;
+    font-size: 18px;
+}
+
+.project-item p {
+    font-size: 14px;
+    line-height: 1.5;
+}
