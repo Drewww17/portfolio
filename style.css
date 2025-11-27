@@ -1,7 +1,7 @@
 /* Default Light Theme */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #E9EDBB;
     color: #333;
     margin: 0;
     padding: 20px;
@@ -68,7 +68,6 @@ body.dark {
     font-weight: 600;
 }
 
-/* Projects section – same style vibe as achievements */
 #projects {
     text-align: center;
     margin-top: 40px;
