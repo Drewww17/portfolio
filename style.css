@@ -1,33 +1,35 @@
 /* Default Light Theme */
 body {
-	font-family: Arial, sans-serif;
-	background-color: #f5f5f5;
-	color: #333;
-	margin: 0;
-	padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
 }
 
 header {
-	text-align: center;
-	margin-bottom: 30px;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 #profile-img {
-	width: 150px;
-	border-radius: 50%;
+    width: 150px;
+    border-radius: 50%;
 }
 
 button {
-	padding: 10px 20px;
-	margin-top: 10px;
-	cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 /* Dark Theme */
 body.dark {
-	background-color: #121212;
-	color: #f5f5f5;
+    background-color: #121212;
+    color: #f5f5f5;
 }
+
+/* Achievements section */
 #achievements {
     text-align: center;
     margin-top: 40px;
@@ -65,48 +67,43 @@ body.dark {
     font-size: 14px;
     font-weight: 600;
 }
-#projects ul li {
-    margin-bottom: 20px;
-    line-height: 1.5;
-}
-#projects {
-    margin-top: 40px;
-}
 
-#projects h2 {
+/* Projects section – same style vibe as achievements */
+#projects {
     text-align: center;
-    margin-bottom: 20px;
+    margin-top: 40px;
 }
 
 .project-grid {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .project-item {
     width: 300px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    text-align: center;
 }
 
 .project-item img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.project-item h3 {
-    margin: 8px 0 4px;
-    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .project-item p {
+    margin-top: 6px;
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.4;
+}
+
+.project-role {
+    font-weight: 600;
+}
+
+.project-desc {
+    font-size: 13px;
 }
