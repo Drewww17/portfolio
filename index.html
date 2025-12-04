@@ -1,96 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Student Portfolio</title>
-      <link rel="stylesheet" href="style.css">
-   </head>
-   <body>
-      <header>
-         <h1 id="student-name">Philip Andrew Luminarias</h1>
-         <img src="Image.jpeg" alt="Profile Picture" id="profile-img">
-         <p id="course-year">BS Computer Science – 3rd Year</p>
-         <button id="theme-toggle">Switch Theme</button>
-      </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portfolio – Philip Andrew Luminarias</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="profile-info">
+        <img src="Image.jpeg" alt="Profile Picture of Philip Andrew Luminarias" id="profile-img">
+        <div>
+          <h1 id="student-name">Philip Andrew Luminarias</h1>
+          <p id="course-year">BS Computer Science – 3rd Year</p>
+        </div>
+      </div>
 
-      <section id="achievements">
-         <h2>Achievements</h2>
-         <ul>
-            <li>Microsoft Office Specialist: Excel Associate (Microsoft 365 Apps, 2025)</li>
-            <li>IT Specialist – Data Analytics (Certiport, 2025)</li>
-            <li>IT Specialist – Java (Certiport, 2025)</li>
-         </ul>
+      <div class="header-actions">
+        <button id="theme-toggle">Switch Theme</button>
+      </div>
+    </div>
 
-         <div class="achievement-grid">
-            <div class="achievement-item">
-               <img src="cert-excel.png" alt="Excel Associate Achievement">
-               <p><strong>Excel Associate – Microsoft 365 Apps</strong></p>
-            </div>
+    <nav class="site-nav">
+      <div class="container nav-links">
+        <a href="#achievements">Achievements</a>
+        <a href="#projects">Projects</a>
+        <a href="#landing-page-activity">Landing Page Activity</a>
+      </div>
+    </nav>
+  </header>
 
-            <div class="achievement-item">
-               <img src="cert-data-analytics.png" alt="Data Analytics Achievement">
-               <p><strong>IT Specialist – Data Analytics</strong></p>
-            </div>
+  <main class="container main-content">
+    <!-- Achievements -->
+    <section id="achievements">
+      <h2>Achievements</h2>
+      <ul>
+        <li>Microsoft Office Specialist: Excel Associate (Microsoft 365 Apps, 2025)</li>
+        <li>IT Specialist – Data Analytics (Certiport, 2025)</li>
+        <li>IT Specialist – Java (Certiport, 2025)</li>
+      </ul>
 
-            <div class="achievement-item">
-               <img src="cert-java.png" alt="Java Achievement">
-               <p><strong>IT Specialist – Java</strong></p>
-            </div>
-         </div>
-      </section>
+      <div class="achievement-grid">
+        <div class="achievement-item card">
+          <img src="cert-excel.png" alt="Excel Associate Achievement">
+          <p><strong>Excel Associate – Microsoft 365 Apps</strong></p>
+        </div>
 
-      <section id="projects">
-         <h2>Previous Projects</h2>
+        <div class="achievement-item card">
+          <img src="cert-data-analytics.png" alt="Data Analytics Achievement">
+          <p><strong>IT Specialist – Data Analytics</strong></p>
+        </div>
 
-         <div class="project-grid">
-            <div class="project-item">
-               <img src="proj-bookwise.png" alt="BookWise Resource Booking System">
-               <p><strong>BookWise – School Resource Booking System</strong></p>
-               <p class="project-role"><em>Backend Project Developer</em></p>
-               <p class="project-desc">
-                  Developed backend APIs using Node.js, Express, Prisma ORM, and PostgreSQL.
-                  Implemented JWT authentication, role-based access, and Dockerized the backend
-                  for consistent deployment.
-               </p>
-            </div>
+        <div class="achievement-item card">
+          <img src="cert-java.png" alt="Java Achievement">
+          <p><strong>IT Specialist – Java</strong></p>
+        </div>
+      </div>
+    </section>
 
-            <div class="project-item">
-               <img src="proj-coffee-co.png" alt="Coffee & Co. POS System">
-               <p><strong>Coffee & Co. – POS / Management System</strong></p>
-               <p class="project-role"><em>Lead Project Developer</em></p>
-               <p class="project-desc">
-                  Built a C#/.NET-based POS desktop application with SQL database integration,
-                  inventory tracking, sales processing, and basic analytics for SMEs.
-               </p>
-            </div>
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Previous Projects</h2>
 
-            <div class="project-item">
-               <img src="proj-pineapple.png" alt="Systematic Pineapple Ripeness Detection">
-               <p><strong>Systematic Pineapple Ripeness Detection (YOLOv8–12)</strong></p>
-               <p class="project-role"><em>Lead Project Developer</em></p>
-               <p class="project-desc">
-                  Designed and trained YOLO models to classify pineapple ripeness stages using
-                  a custom image dataset, augmentation, and hyperparameter tuning, with a
-                  near real-time detection interface.
-               </p>
-            </div>
+      <div class="project-grid">
+        <div class="project-item card">
+          <img src="proj-bookwise.png" alt="BookWise Resource Booking System">
+          <p class="project-title"><strong>BookWise – School Resource Booking System</strong></p>
+          <p class="project-role"><em>Backend Project Developer</em></p>
+          <p class="project-desc">
+            Developed backend APIs using Node.js, Express, Prisma ORM, and PostgreSQL.
+            Implemented JWT authentication, role-based access, and Dockerized the backend
+            for consistent deployment.
+          </p>
+        </div>
 
-            <div class="project-item">
-               <img src="proj-cea-slayers.png" alt="CEA Slayers Game">
-               <p><strong>CEA Slayers – 2D Python Game</strong></p>
-               <p class="project-role"><em>Project Head / Game Designer</em></p>
-               <p class="project-desc">
-                  Created a 2D arcade-style game in Python (Pygame) using OOP for player,
-                  enemy, and game state logic, and coordinated a small team for art,
-                  balancing, and testing.
-               </p>
-            </div>
-         </div>
-      </section>
+        <div class="project-item card">
+          <img src="proj-coffee-co.png" alt="Coffee & Co. POS System">
+          <p class="project-title"><strong>Coffee & Co. – POS / Management System</strong></p>
+          <p class="project-role"><em>Lead Project Developer</em></p>
+          <p class="project-desc">
+            Built a C#/.NET-based POS desktop application with SQL database integration,
+            inventory tracking, sales processing, and basic analytics for SMEs.
+          </p>
+        </div>
 
-      <script src="script.js"></script>
-   </body>
+        <div class="project-item card">
+          <img src="proj-pineapple.png" alt="Systematic Pineapple Ripeness Detection">
+          <p class="project-title"><strong>Systematic Pineapple Ripeness Detection (YOLOv8–12)</strong></p>
+          <p class="project-role"><em>Lead Project Developer</em></p>
+          <p class="project-desc">
+            Designed and trained YOLO models to classify pineapple ripeness stages using
+            a custom image dataset, augmentation, and hyperparameter tuning, with a
+            near real-time detection interface.
+          </p>
+        </div>
+
+        <div class="project-item card">
+          <img src="proj-cea-slayers.png" alt="CEA Slayers Game">
+          <p class="project-title"><strong>CEA Slayers – 2D Python Game</strong></p>
+          <p class="project-role"><em>Project Head / Game Designer</em></p>
+          <p class="project-desc">
+            Created a 2D arcade-style game in Python (Pygame) using OOP for player,
+            enemy, and game state logic, and coordinated a small team for art,
+            balancing, and testing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Landing Page Activity -->
+    <section id="landing-page-activity">
+      <h2>Landing Page Activity – GreenSense</h2>
+      <p>
+        This landing page was designed based on the GreenSense case study to practice responsive layout,
+        visual hierarchy, and CSS-driven design.
+      </p>
+      <!-- ⚠️ Replace the href below with your actual GitHub Pages or repo link -->
+      <a href="https://YOUR-LANDING-PAGE-LINK-HERE" target="_blank" class="btn-link">
+        🔗 View GreenSense Landing Page
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2025 Philip Andrew Luminarias. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
+
 
 
