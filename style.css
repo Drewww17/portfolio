@@ -1,108 +1,349 @@
-/* Default Light Theme */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #EDEDD8;
-    color: #333;
-    margin: 0;
-    padding: 20px;
+/* ===========================
+   Base + Theme
+=========================== */
+:root {
+  --bg-light: #EDEDD8;
+  --bg-dark: #121212;
+  --card-light: #ffffff;
+  --card-dark: #1e1e1e;
+  --accent: #2d6a4f;
+  --accent-dark: #1b4332;
+  --text-main: #333;
+  --text-light: #f5f5f5;
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --radius-card: 12px;
 }
 
-header {
-    text-align: center;
-    margin-bottom: 30px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  margin: 0;
+}
+
+/* Dark theme */
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+/* Container */
+.container {
+  width: min(1100px, 100% - 40px);
+  margin: 0 auto;
+}
+
+/* ===========================
+   Header
+=========================== */
+.site-header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+body.dark .site-header {
+  background-color: #1c1c1c;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+/* Profile block */
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 #profile-img {
-    width: 150px;
-    border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow-soft);
 }
 
-button {
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
+#student-name {
+  margin: 0;
+  font-size: 1.4rem;
 }
 
-/* Dark Theme */
-body.dark {
-    background-color: #121212;
-    color: #f5f5f5;
+#course-year {
+  margin: 3px 0 0;
+  font-size: 0.95rem;
+  opacity: 0.85;
 }
 
-/* Achievements section */
+/* Theme toggle button */
+#theme-toggle {
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: #f9f9f9;
+  transition: 0.3s ease;
+}
+
+#theme-toggle:hover {
+  background: #e5e5e5;
+  transform: translateY(-1px);
+}
+
+body.dark #theme-toggle {
+  background: #2c2c2c;
+  color: #f5f5f5;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ===========================
+   Navigation
+=========================== */
+.site-nav {
+  border-top: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  background: #fafafa;
+}
+
+body.dark .site-nav {
+  background: #181818;
+  border-color: rgba(255,255,255,0.06);
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+  font-size: 0.95rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--accent);
+  transition: width 0.2s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ===========================
+   Main Layout
+=========================== */
+.main-content {
+  padding: 20px 0 40px;
+}
+
+/* Section Headings */
+section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+section {
+  margin-top: 40px;
+}
+
+/* ===========================
+   Achievements
+=========================== */
 #achievements {
-    text-align: center;
-    margin-top: 40px;
+  text-align: left;
 }
 
 #achievements ul {
-    list-style-position: inside;
-    text-align: left;
-    max-width: 700px;
-    margin: 0 auto;
+  list-style-position: inside;
+  text-align: left;
+  max-width: 700px;
+  margin: 0 0 20px;
+  padding: 0;
 }
 
-.achievement-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 25px;
+#achievements ul li {
+  margin-bottom: 4px;
 }
 
-.achievement-item {
-    width: 300px;
-    text-align: center;
+/* Card grid shared */
+.achievement-grid,
+.project-grid {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
+/* Card */
+.card {
+  background-color: var(--card-light);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+  padding: 14px;
+  text-align: left;
+  max-width: 300px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+body.dark .card {
+  background-color: var(--card-dark);
+}
+
+/* Achievement images */
 .achievement-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .achievement-item p {
-    margin-top: 10px;
-    font-size: 14px;
-    font-weight: 600;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
 }
 
+/* ===========================
+   Projects
+=========================== */
 #projects {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.project-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.project-item {
-    width: 300px;
-    text-align: center;
+  text-align: left;
 }
 
 .project-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 8px;
 }
 
-.project-item p {
-    margin-top: 6px;
-    font-size: 14px;
-    line-height: 1.4;
+.project-title {
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 .project-role {
-    font-weight: 600;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 0 0 4px;
+  opacity: 0.9;
 }
 
 .project-desc {
-    font-size: 13px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
 }
+
+/* ===========================
+   Landing Page Activity
+=========================== */
+#landing-page-activity {
+  text-align: left;
+  margin-top: 40px;
+  padding: 24px 18px;
+  border-radius: var(--radius-card);
+  background-color: rgba(45, 106, 79, 0.06);
+}
+
+body.dark #landing-page-activity {
+  background-color: rgba(45, 106, 79, 0.3);
+}
+
+#landing-page-activity p {
+  max-width: 600px;
+  margin-bottom: 12px;
+}
+
+#landing-page-activity .btn-link {
+  display: inline-block;
+  background-color: var(--accent);
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 0.98rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+#landing-page-activity .btn-link:hover {
+  background-color: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+/* Dark override for link */
+body.dark #landing-page-activity .btn-link {
+  background-color: #40916c;
+}
+
+body.dark #landing-page-activity .btn-link:hover {
+  background-color: #2d6a4f;
+}
+
+/* ===========================
+   Footer
+=========================== */
+.site-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 16px 0;
+  background: #f5f5f5;
+  font-size: 0.85rem;
+}
+
+body.dark .site-footer {
+  background: #181818;
+  border-top-color: rgba(255,255,255,0.1);
+}
+
+.footer-inner {
+  text-align: center;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 700px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .profile-info {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+  }
+}
+
