@@ -5,6 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Portfolio – Philip Andrew Luminarias</title>
   <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* SHARED CARD STYLE (Used for GreenSense & JavaScript Sections) */
+    .highlight-section {
+      background-color: #E6EAD6; /* Light Sage Background */
+      padding: 40px;
+      border-radius: 12px;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      color: #1F2937;
+    }
+
+    .highlight-section h2 {
+      color: #111;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      border-bottom: none !important;
+    }
+
+    .highlight-section p {
+      margin-bottom: 1.5rem;
+      max-width: 700px;
+      line-height: 1.6;
+    }
+
+    /* BROWN BUTTON STYLE */
+    .brown-btn {
+      background-color: #6F4E37; /* Coffee/Earth Brown */
+      color: white !important;
+      padding: 12px 28px;
+      border-radius: 50px; /* Pill shape */
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: background-color 0.2s, transform 0.2s;
+      border: none;
+      margin-right: 10px; /* Spacing between buttons */
+      margin-bottom: 10px; /* Spacing for mobile wrapping */
+    }
+
+    .brown-btn:hover {
+      background-color: #4A3324; /* Darker Brown on hover */
+      transform: translateY(-2px);
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -109,33 +154,29 @@
       </div>
     </section>
 
-    <section id="landing-page-activity">
+    <section id="landing-page-activity" class="highlight-section">
       <h2>Landing Page Activity – GreenSense</h2>
       <p>
         This landing page was designed based on the GreenSense case study to practice responsive layout,
         visual hierarchy, and CSS-driven design.
       </p>
-      <a href="https://drewww17.github.io/GreenSense/#cta" target="_blank" class="btn-link">
+      <a href="https://drewww17.github.io/GreenSense/#cta" target="_blank" class="brown-btn">
         GreenSense Landing Page
       </a>
     </section>
 
-    <section id="javascript-mps">
+    <section id="javascript-mps" class="highlight-section">
       <h2>JavaScript Machine Problems (M1 | FA3)</h2>
       <p>Client-side JavaScript activities demonstrating DOM manipulation and input processing.</p>
 
-      <ul>
-        <li>
-          <a href="https://drewww17.github.io/JavaScript-MP_3/" target="_blank">
-            Machine Problem 3 – ReplaceWord
+      <div style="margin-top: 1rem;">
+          <a href="https://drewww17.github.io/JavaScript-MP_3/" target="_blank" class="brown-btn">
+            MP 3 – ReplaceWord
           </a>
-        </li>
-        <li>
-          <a href="https://drewww17.github.io/JavaScript-MP_5/" target="_blank">
-            Machine Problem 5 – EmailCheck
+          <a href="https://drewww17.github.io/JavaScript-MP_5/" target="_blank" class="brown-btn">
+            MP 5 – EmailCheck
           </a>
-        </li>
-      </ul>
+      </div>
     </section>
 
     <section id="summative-exam">
@@ -158,10 +199,10 @@
           </p>
           
           <div style="margin-top: 1.5rem; text-align: center;">
-             <a href="https://project-m1-part3.vercel.app/" target="_blank" class="btn-link" style="background-color: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+             <a href="https://project-m1-part3.vercel.app/" target="_blank" class="brown-btn" style="background-color: #007bff;">
                🚀 View Live Project
              </a>
-          </div>
+             </div>
       </div>
     </section>
 
