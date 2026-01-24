@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
   
   <style>
-    /* SHARED CARD STYLE (Used for GreenSense & JavaScript Sections) */
+    /* SHARED CARD STYLE (Uniform Look) */
     .highlight-section {
       background-color: #E6EAD6; /* Light Sage Background */
       padding: 40px;
@@ -20,13 +20,13 @@
     .highlight-section h2 {
       color: #111;
       font-size: 1.8rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
       border-bottom: none !important;
     }
 
     .highlight-section p {
-      margin-bottom: 1.5rem;
-      max-width: 700px;
+      margin-bottom: 1rem;
+      max-width: 800px; /* Increased slightly to fit project desc */
       line-height: 1.6;
     }
 
@@ -41,13 +41,23 @@
       display: inline-block;
       transition: background-color 0.2s, transform 0.2s;
       border: none;
-      margin-right: 10px; /* Spacing between buttons */
-      margin-bottom: 10px; /* Spacing for mobile wrapping */
+      margin-right: 10px;
+      margin-bottom: 10px;
     }
 
     .brown-btn:hover {
-      background-color: #4A3324; /* Darker Brown on hover */
+      background-color: #4A3324;
       transform: translateY(-2px);
+    }
+    
+    /* Responsive Image for the Highlights */
+    .highlight-img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        display: block;
     }
   </style>
 </head>
@@ -179,31 +189,28 @@
       </div>
     </section>
 
-    <section id="summative-exam">
+    <section id="summative-exam" class="highlight-section">
       <h2>M1 Summative Assessment – Part 3</h2>
       
-      <div class="project-item card" style="max-width: 800px; margin: 0 auto;">
-          <img src="proj-f1hub.png" alt="F1HUB Dashboard Project" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
-          <h3 class="project-title" style="font-size: 1.5rem; margin-bottom: 0.5rem;">F1HUB – 2026 Season Dashboard</h3>
-          <p class="project-role"><em>Frontend Developer</em></p>
-          
-          <p class="project-desc" style="margin-bottom: 1rem;">
-            F1HUB was developed by Philip Andrew Luminarias as part of the M1 Summative Assessment (Part 3). 
-            It demonstrates advanced front-end development skills by combining public REST API integration with high-fidelity UI design. 
-            The app showcases the confirmed 2026 driver lineup and provides fans with an immersive way to track the season schedule.
-          </p>
+      <p style="font-size: 1.2rem; font-weight: bold; margin-bottom: 0.5rem;">F1HUB – 2026 Season Dashboard</p>
+      <p style="margin-bottom: 1.5rem; font-style: italic;">Frontend Developer</p>
+      
+      <img src="proj-f1hub.png" alt="F1HUB Dashboard Project" class="highlight-img">
+      
+      <p>
+        F1HUB was developed by Philip Andrew Luminarias as part of the M1 Summative Assessment (Part 3). 
+        It demonstrates advanced front-end development skills by combining public REST API integration with high-fidelity UI design. 
+        The app showcases the confirmed 2026 driver lineup and provides fans with an immersive way to track the season schedule.
+      </p>
 
-          <p class="project-desc">
-            <strong>Tech Stack:</strong> Built using <strong>React.js</strong> and <strong>Tailwind CSS</strong>. 
-            Features include a cinematic splash screen, dark mode glassmorphism UI, and a dynamic race countdown timer.
-          </p>
-          
-          <div style="margin-top: 1.5rem; text-align: center;">
-             <a href="https://project-m1-part3.vercel.app/" target="_blank" class="brown-btn" style="background-color: #007bff;">
-               🚀 View Live Project
-             </a>
-             </div>
-      </div>
+      <p>
+        <strong>Tech Stack:</strong> Built using <strong>React.js</strong> and <strong>Tailwind CSS</strong>. 
+        Features include a cinematic splash screen, dark mode glassmorphism UI, and a dynamic race countdown timer.
+      </p>
+      
+      <a href="https://project-m1-part3.vercel.app/" target="_blank" class="brown-btn">
+         View Live Project
+      </a>
     </section>
 
   </main>
